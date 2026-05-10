@@ -1,0 +1,470 @@
+/*!
+foundation > reset
+------------------------------
+*/
+html {
+  color: #000;
+  background: #fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+figure,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: inherit;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-size: 100%;
+  border-radius: 0;
+  border: none;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  background-color: inherit;
+}
+
+textarea {
+  resize: vertical;
+  display: block;
+}
+
+select {
+  cursor: pointer;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+legend {
+  color: inherit;
+}
+
+tbody {
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+dialog {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+  color: inherit;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+iframe {
+  vertical-align: bottom;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*!
+ global > breakpoint
+------------------------------
+*/
+/*!
+ global > color
+------------------------------
+*/
+:root {
+  --color-bg-primary: #303030;
+  --color-bg-secondary: #efefef;
+  --color-bg-tertiary: #fcfafa;
+  --color-text-primary: #1d1d1d;
+  --color-accent-primary: #3f4f8a;
+  --color-accent-secondary: #59b9c7;
+  --color-accent-tertiary: #b7c8d0;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+/*!
+global > font
+------------------------------
+*/
+@font-face {
+  font-family: "Zen Kaku Gothic Antique";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/ZenKakuGothicAntique/ZenKakuGothicAntique-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Zen Kaku Gothic Antique";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/ZenKakuGothicAntique/ZenKakuGothicAntique-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Zen Kaku Gothic Antique";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/ZenKakuGothicAntique/ZenKakuGothicAntique-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Outfit";
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/Outfit/Outfit-ExtraLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Outfit";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Outfit/Outfit-Light.woff2") format("woff2");
+}
+:root {
+  --font-family-base: "Zen Kaku Gothic Antique", sans-serif;
+  --font-family-en: "Outfit", sans-serif;
+}
+
+/*!
+global > duration
+------------------------------
+*/
+:root {
+  --duration-base: 0.3s;
+}
+
+/*!
+ global > z-index
+------------------------------
+*/
+:root {
+  --z-index-header: 30;
+  --z-index-default: 1;
+  --z-index-negative: -1;
+}
+
+/*!
+foundation > base
+------------------------------
+*/
+:root {
+  --base-vw: 375;
+}
+@media screen and (min-width: 900px) {
+  :root {
+    --base-vw: 1440;
+  }
+}
+
+* {
+  letter-spacing: 0.05em;
+}
+
+html {
+  font-size: calc(100vw / var(--base-vw));
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 2;
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 2;
+}
+
+/*!
+ component > btn-text
+------------------------------
+*/
+/*!
+ component > btn-arrow
+------------------------------
+*/
+/*!
+ component > title
+------------------------------
+*/
+/*!
+ component > title-small
+------------------------------
+*/
+/*!
+ component > marquee
+------------------------------
+*/
+/*!
+  component > news-item
+------------------------------
+*/
+/*!
+ component > voice-item
+------------------------------
+*/
+/*!
+ component > contact-label
+------------------------------
+*/
+/*!
+utility
+------------------------------
+*/
+@media screen and (min-width: 900px) {
+  .u-link-hover {
+    transition: opacity var(--duration-base);
+  }
+}
+@media screen and (min-width: 900px) and (any-hover: hover) {
+  .u-link-hover:hover {
+    opacity: 0.6;
+  }
+}
+
+.u-text-hover {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  transition: background-size var(--duration-base);
+  display: block;
+  line-height: 1;
+}
+@media screen and (min-width: 900px) {
+  .u-text-hover {
+    padding-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 900px) and (any-hover: hover) {
+  .u-text-hover:hover {
+    background-size: 100% 1px;
+  }
+}
+
+.sp-hidden {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .sp-hidden {
+    display: block;
+  }
+}
+
+/*!
+ layout > header
+------------------------------
+ */
+/*!
+ layout > drawer
+------------------------------
+*/
+/*!
+ layout > contact-cta
+------------------------------
+*/
+/*!
+ layout > footer
+ ------------------------------
+*/
+/*!
+ layout > sub-page-fv
+------------------------------
+ */
+/*!
+ top > top-fv
+------------------------------
+ */
+/*!
+ top > top-about
+------------------------------
+ */
+/*!
+ top > top-service
+------------------------------
+ */
+/*!
+ top > top-feature
+------------------------------
+ */
+/*!
+ top > top-voice
+------------------------------
+ */
+/*!
+ top > top-news
+------------------------------
+ */
+/*!
+ feature
+------------------------------
+ */
+/*!
+ service
+------------------------------
+ */
+/*!
+ about > about-message
+------------------------------
+ */
+/*!
+ about > about-values
+------------------------------
+ */
+/*!
+ about > about-company
+------------------------------
+ */
+/*!
+ about > about-access
+------------------------------
+ */
+/*!
+ voice
+------------------------------
+ */
+/*!
+  voice > detail > voice-detail-article
+------------------------------
+ */
+/*!
+  voice > detail > voice-detail-other
+------------------------------
+ */
+/*!
+ news
+------------------------------
+ */
+/*!
+ news > detail > news-detail-article
+------------------------------
+ */
+/*!
+ contact
+------------------------------
+ */
+/*!
+ contact > confirm
+------------------------------
+ */
+/*!
+ contact > thanks
+------------------------------
+ */
+/*!
+ privacy-policy
+------------------------------
+ *//*# sourceMappingURL=style.css.map */

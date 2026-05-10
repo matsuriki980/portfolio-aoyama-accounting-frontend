@@ -1,0 +1,48 @@
+@use "../global" as g;
+
+/*!
+utility
+------------------------------
+*/
+
+// ホバー対象を半透明にする
+.u-link-hover {
+  @include g.mq() {
+    transition: opacity var(--duration-base);
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+// ホバー対象の下部に線を伸ばす
+.u-text-hover {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  transition: background-size var(--duration-base);
+  display: block;
+  line-height: 1;
+
+  @include g.mq() {
+    padding-bottom: 4rem;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-size: 100% 1px;
+      }
+    }
+  }
+}
+
+.sp-hidden {
+  display: none;
+
+  @include g.mq() {
+    display: block;
+  }
+}

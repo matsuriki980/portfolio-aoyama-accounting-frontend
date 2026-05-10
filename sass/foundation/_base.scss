@@ -1,0 +1,35 @@
+@use "../global" as g;
+@use "../mixin/mixin" as m;
+
+
+/*!
+foundation > base
+------------------------------
+*/
+
+:root {
+  --base-vw: 375;
+
+  @include g.mq() {
+    --base-vw: 1440;
+  }
+}
+
+* {
+  letter-spacing: 0.05em;
+}
+
+html {
+  font-size: calc(100vw / var(--base-vw));
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 2;
+  @include m.font-family-base;
+  @include m.font-size(16,32);
+
+  // @include g.mq() {
+  //   font-size: 18rem;
+  // }
+}

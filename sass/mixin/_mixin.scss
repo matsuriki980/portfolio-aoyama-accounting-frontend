@@ -1,0 +1,39 @@
+@use "../global" as g;
+
+//
+// mixin > mixin
+// ------------------------------
+//
+
+// ==================================================================
+// fonts family / weight
+// ==================================================================
+
+// 受け取った値に応じてweightを変更
+$font-weight: (
+  "ExtraLight": 200,
+  "Light": 300,
+  "Regular": 400,
+  "Medium": 500,
+  "Bold": 700,
+);
+
+@mixin font-family-base($weight: "Regular") {
+  font-family: var(--font-family-base);
+  font-weight: map-get($font-weight, $weight);
+}
+
+@mixin font-family-en($weight: "ExtraLight") {
+  font-family: var(--font-family-en);
+  font-weight: map-get($font-weight, $weight);
+}
+
+// ==================================================================
+// fonts size / line height
+// ==================================================================
+
+// サイズを軸に行間を自動計算
+@mixin font-size($size, $line-height) {
+  font-size: #{$size}rem;
+  line-height: $line-height / $size;
+}
