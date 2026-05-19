@@ -1,0 +1,139 @@
+@use "../../global" as g;
+@use "../../mixin/mixin" as m;
+
+/*!
+ layout > footer > contact
+------------------------------
+*/
+.l-footer__contact {
+  background-color: var(--color-bg-primary);
+}
+
+
+.l-footer__contact-inner {
+  background-color: var(--color-bg-secondary);
+  border-radius: 10rem;
+  position: relative;
+  height: 555rem;
+  padding: 30rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include g.mq() {
+    padding: 0 60rem;
+    display: grid;
+    grid-template-columns: 1fr 570rem;
+    align-items: center;
+    height: 540rem;
+  }
+
+  // 背景テクスチャ
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    mask-image: url(../img/common/bg-lattice-footer-contact.svg);
+    @include m.mask-img(cover);
+    background-color: var(--color-bg-primary);
+
+    @include g.mq() {
+      mask-image: url(../img/common/bg-lattice.svg);
+    }
+  }
+}
+
+.l-footer__contact-content {
+  padding: 0 30rem;
+  position: relative;
+  z-index: var(--z-index-default);
+}
+
+.l-footer__contact-title-wrap {
+  color: var(--color-text-primary);
+}
+
+.l-footer__contact-title--en {
+  @include m.font-size($font-size: 58, $line-height: 58);
+
+  @include g.mq() {
+    font-size: 110rem;
+  }
+}
+
+.l-footer__contact-text {
+  font-size: 14rem;
+  text-align: center;
+  margin-top: 16rem;
+
+  @include g.mq() {
+    text-align: left;
+    margin-top: 38rem;
+    font-size: 16rem;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.l-footer__contact-btn {
+  color: var(--color-text-primary);
+  opacity: 0.4;
+  transition: opacity var(--duration-base);
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
+
+  @include g.mq() {
+    margin-top: 34rem;
+    justify-content: flex-start;
+  }
+
+  // hover時、透過解除
+  @media (any-hover: hover) {
+    &:has(.btn-arrow:hover) {
+      opacity: 1;
+    }
+  }
+}
+
+.l-footer__contact-visual {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+  position: relative;
+  z-index: var(--z-index-default);
+  height: 39%;
+  width: 100%;
+
+  @include g.mq() {
+    flex-direction: row;
+    gap: 30rem;
+    height: 100%;
+  }
+}
+
+.l-footer__contact-slider {
+  width: 100%;
+  height: 100%;
+
+  .swiper-wrapper {
+    transition-timing-function: linear;
+    width: 100%;
+    height: 1020rem;
+  }
+}
+
+.l-footer__contact-img {
+  overflow: hidden;
+  border-radius: 5rem;
+  width: 150rem;
+  height: 100%;
+
+  @include g.mq() {
+    width: 270rem;
+  }
+}
