@@ -1316,7 +1316,7 @@ body.is-drawer-open {
   }
 }
 @media (any-hover: hover) {
-  .l-footer__contact-btn:has(.btn-arrow:hover) {
+  .l-footer__contact-btn:has(.c-btn-arrow:hover) {
     opacity: 1;
   }
 }
