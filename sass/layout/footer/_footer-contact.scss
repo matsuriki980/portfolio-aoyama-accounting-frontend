@@ -93,7 +93,7 @@
 
   // hover時、透過解除
   @media (any-hover: hover) {
-    &:has(.btn-arrow:hover) {
+    &:has(.c-btn-arrow:hover) {
       opacity: 1;
     }
   }
