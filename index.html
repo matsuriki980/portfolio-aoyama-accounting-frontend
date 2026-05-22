@@ -27,7 +27,7 @@
 <body>
 
     <!-- header -->
-    <header class="l-header js-header" style="display: none;">
+    <header class="l-header js-header">
         <div class="l-header__inner">
 
             <!-- logo -->
@@ -231,6 +231,45 @@
 
     <!-- main content -->
     <main>
+
+        <!-- fv -->
+        <div class="top-fv">
+            <div class="top-fv__inner">
+                <div class="top-fv__head">
+                    <div class="top-fv__title-wrap">
+                        <p class="top-fv__title top-fv__title--en">
+                            <span>numbers</span>
+                            <span>expeat</span>
+                        </p>
+                        <h2 class="top-fv__title top-fv__title--ja">
+                            <span>数字の専門家</span>
+                            <span>ともに歩むパートナーとして</span>
+                        </h2>
+                    </div>
+                    <a href="#top-about" class="top-fv__scroll-btn u-link-hover" aria-label="top-aboutセクションまでスクロール">
+                        <span class="top-fv__scroll-icon"></span>
+                    </a>
+                </div>
+
+                <div class="top-fv__img">
+                    <picture>
+                        <source media="(min-width: 900px)" srcset="/img/top/top-kv.jpg">
+
+                        <img src="/img/top/top-kv-sp.jpg" width="375" height="480"
+                            alt="お客様のパートナーとして、専門家の立場から親身になってご支援します。">
+                    </picture>
+                </div>
+            </div>
+        </div>
+
+        <!-- marquee -->
+        <div class="top-about__marquee c-marquee" style="display: none;">
+            <div class="top-about__marquee__inner c-marquee__inner">
+                <span>As partners walking together</span>
+                <span>As partners walking together</span> <!-- 2個配置し途切れるのを防ぐ -->
+            </div>
+        </div>
+
         <!-- service -->
         <section class="top-service">
             <div class="top-service__inner">

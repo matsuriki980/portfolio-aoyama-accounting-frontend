@@ -5,3 +5,116 @@
  top > top-fv
 ------------------------------
  */
+
+.top-fv__inner {
+  padding-top: 87rem;
+
+  @include g.mq() {
+    padding: 196rem 90rem 0 0;
+  }
+}
+
+.top-fv__head {
+  padding-inline: 30rem;
+  display: flex;
+  align-items: flex-end;
+
+  @include g.mq() {
+    padding-inline: 80rem 0;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.top-fv__title {
+  color: var(--color-text-primary);
+}
+
+.top-fv__title--en {
+  @include m.font-family-en($weight: "Light");
+  @include m.font-size($font-size: 70, $line-height: 67);
+  text-transform: capitalize;
+
+  @include g.mq() {
+    @include m.font-size($font-size: 131, $line-height: 70);
+  }
+
+  span {
+    display: block;
+    @include m.letter-spacing(-5);
+
+    @include g.mq() {
+      display: inline-block;
+    }
+  }
+}
+
+.top-fv__title--ja {
+  @include m.letter-spacing(7);
+  margin-top: 16rem;
+
+  @include g.mq() {
+    display: flex;
+    gap: 18rem;
+    margin-top: 48rem;
+  }
+
+  span {
+    @include m.font-size($font-size: 16, $line-height: 32);
+    display: block;
+
+    @include g.mq() {
+      display: inline-block;
+    }
+  }
+}
+
+.top-fv__scroll-btn {
+  width: 60rem;
+  aspect-ratio: 1/1;
+  color: var(--color-text-primary);
+  border: 1px solid currentColor;
+  display: grid;
+  place-items: center;
+
+  @include g.mq() {
+    width: 120rem;
+  }
+}
+
+.top-fv__scroll-icon {
+  width: 46.66666%;
+  aspect-ratio: 1/1;
+  mask-image: url(../img/top/top-kv-scroller-arrow.svg);
+  @include m.mask-img;
+  background-color: currentColor;
+}
+
+.top-fv__img {
+  margin-top: 45rem;
+  position: relative;
+
+  @include g.mq() {
+    margin-top: 56rem;
+  }
+
+  // 装飾
+  &::before {
+    content: "";
+    display: block;
+    width: 65rem;
+    height: 75rem;
+    position: absolute;
+    top: -28rem;
+    right: 0;
+    background-image: url(../../../img/top/top-kv-decoration.svg);
+    @include m.background-img;
+
+    @include g.mq() {
+      width: 120rem;
+      height: 150rem;
+      top: -60rem;
+      right: -60rem;
+    }
+  }
+}

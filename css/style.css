@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 foundation > reset
 ------------------------------
@@ -509,6 +510,73 @@ body {
  component > marquee
 ------------------------------
 */
+.c-marquee {
+  display: block;
+  width: 100%;
+  height: 65rem;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+@media screen and (min-width: 900px) {
+  .c-marquee {
+    height: 135rem;
+  }
+}
+.c-marquee::before, .c-marquee::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  background-color: currentColor;
+}
+.c-marquee::before {
+  top: 0;
+  left: 0;
+}
+.c-marquee::after {
+  bottom: 0;
+  left: 0;
+}
+.c-marquee__inner {
+  display: inline-block;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.c-marquee span {
+  font-family: var(--font-family-en);
+  font-weight: 200;
+  font-size: 125rem;
+  line-height: 0.4208;
+  letter-spacing: -0.02em;
+  display: inline-block;
+}
+@media screen and (min-width: 900px) {
+  .c-marquee span {
+    font-size: 250rem;
+    line-height: 0.42;
+  }
+}
+
+/* テキストを左向きに流す */
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* テキストを右向きに流す */
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 /*!
   component > news-item
 ------------------------------
@@ -1607,10 +1675,148 @@ body.is-drawer-open {
  top > top-fv
 ------------------------------
  */
+.top-fv__inner {
+  padding-top: 87rem;
+}
+@media screen and (min-width: 900px) {
+  .top-fv__inner {
+    padding: 196rem 90rem 0 0;
+  }
+}
+
+.top-fv__head {
+  padding-inline: 30rem;
+  display: flex;
+  align-items: flex-end;
+}
+@media screen and (min-width: 900px) {
+  .top-fv__head {
+    padding-inline: 80rem 0;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.top-fv__title {
+  color: var(--color-text-primary);
+}
+
+.top-fv__title--en {
+  font-family: var(--font-family-en);
+  font-weight: 300;
+  font-size: 70rem;
+  line-height: 0.9571428571;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 900px) {
+  .top-fv__title--en {
+    font-size: 131rem;
+    line-height: 0.534351145;
+  }
+}
+.top-fv__title--en span {
+  display: block;
+  letter-spacing: -0.05em;
+}
+@media screen and (min-width: 900px) {
+  .top-fv__title--en span {
+    display: inline-block;
+  }
+}
+
+.top-fv__title--ja {
+  letter-spacing: 0.07em;
+  margin-top: 16rem;
+}
+@media screen and (min-width: 900px) {
+  .top-fv__title--ja {
+    display: flex;
+    gap: 18rem;
+    margin-top: 48rem;
+  }
+}
+.top-fv__title--ja span {
+  font-size: 16rem;
+  line-height: 2;
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .top-fv__title--ja span {
+    display: inline-block;
+  }
+}
+
+.top-fv__scroll-btn {
+  width: 60rem;
+  aspect-ratio: 1/1;
+  color: var(--color-text-primary);
+  border: 1px solid currentColor;
+  display: grid;
+  place-items: center;
+}
+@media screen and (min-width: 900px) {
+  .top-fv__scroll-btn {
+    width: 120rem;
+  }
+}
+
+.top-fv__scroll-icon {
+  width: 46.66666%;
+  aspect-ratio: 1/1;
+  -webkit-mask-image: url(../img/top/top-kv-scroller-arrow.svg);
+          mask-image: url(../img/top/top-kv-scroller-arrow.svg);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+}
+
+.top-fv__img {
+  margin-top: 45rem;
+  position: relative;
+}
+@media screen and (min-width: 900px) {
+  .top-fv__img {
+    margin-top: 56rem;
+  }
+}
+.top-fv__img::before {
+  content: "";
+  display: block;
+  width: 65rem;
+  height: 75rem;
+  position: absolute;
+  top: -28rem;
+  right: 0;
+  background-image: url(../../../img/top/top-kv-decoration.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 900px) {
+  .top-fv__img::before {
+    width: 120rem;
+    height: 150rem;
+    top: -60rem;
+    right: -60rem;
+  }
+}
+
 /*!
  top > top-about
 ------------------------------
  */
+.top-about__marquee::before, .top-about__marquee::after {
+  height: 1px;
+}
+
+.top-about__marquee__inner {
+  animation-name: marquee-left;
+}
+
 /*!
  top > top-service
 ------------------------------
