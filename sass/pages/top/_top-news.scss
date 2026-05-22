@@ -5,3 +5,51 @@
  top > top-news
 ------------------------------
  */
+.top-news {
+  padding: 45rem 0 60rem;
+
+  @include g.mq() {
+    padding: 110rem 0 88rem;
+  }
+}
+
+.top-news__inner {
+  padding-inline: 15rem;
+
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: 175rem 1fr;
+    gap: 0 125rem;
+    padding-inline: 120rem;
+  }
+}
+
+.top-news__title--en {
+  font-size: 64rem;
+
+  @include g.mq() {
+    font-size: 76rem;
+  }
+}
+
+.top-news__list {
+  margin-top: 40rem;
+
+  // 1つめのitemのみ上の線を配置
+  border-top: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+
+ @include g.mq() {
+    margin-top: 0;
+ }
+}
+
+.top-news__btn {
+  margin-top: 36rem;
+
+  @include g.mq() {
+    margin-top: 60rem;
+    width: 335rem;
+    grid-column: 2/3;
+    margin-left: auto;
+  }
+}
