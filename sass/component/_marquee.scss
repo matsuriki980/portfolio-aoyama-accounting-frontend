@@ -49,14 +49,9 @@
   // text設定
   span {
     @include m.font-family-en($weight: "ExtraLight");
-    font-size: 125rem;
     line-height: 0.55;
     @include m.letter-spacing(-2);
     display: inline-block;
-
-    @include g.mq() {
-      font-size: 250rem;
-    }
   }
 }
 
