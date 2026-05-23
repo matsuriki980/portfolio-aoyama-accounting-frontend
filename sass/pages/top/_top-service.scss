@@ -7,21 +7,20 @@
  */
 
 .top-service {
-  @include g.mq() {
-    // margin-bottom: -60rem;
-  }
-}
+  padding-top: 45rem;
 
-.top-service__inner {
+  @include g.mq() {
+    padding-top: 160rem;
+  }
 }
 
 .top-service__head {
   padding-inline: 30rem 45rem;
 
   @include g.mq() {
-    padding-inline: 60rem 90rem;
+    padding-inline: 120rem;
     display: grid;
-    grid-template-columns: 780rem 435rem;
+    grid-template-columns: 1fr 435rem;
   }
 }
 
