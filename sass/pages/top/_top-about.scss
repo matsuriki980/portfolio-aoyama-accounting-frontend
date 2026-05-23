@@ -205,6 +205,14 @@
   &::after {
     height: 0.8rem;
   }
+
+  span {
+    font-size: 125rem;
+
+    @include g.mq() {
+      font-size: 250rem;
+    }
+  }
 }
 
 .top-about__marquee__inner {
