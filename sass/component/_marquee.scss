@@ -5,3 +5,77 @@
  component > marquee
 ------------------------------
 */
+.c-marquee {
+  display: block;
+  width: 100%;
+  height: 75rem;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+
+  @include g.mq() {
+    height: 160rem;
+  }
+
+  // 上下線の設定
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    background-color: currentColor;
+  }
+
+  // 上線
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // 下線
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+
+  &__inner {
+    display: inline-block;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  // text設定
+  span {
+    @include m.font-family-en($weight: "ExtraLight");
+    font-size: 125rem;
+    line-height: 0.55;
+    @include m.letter-spacing(-2);
+    display: inline-block;
+
+    @include g.mq() {
+      font-size: 250rem;
+    }
+  }
+}
+
+/* テキストを左向きに流す */
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* テキストを右向きに流す */
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
