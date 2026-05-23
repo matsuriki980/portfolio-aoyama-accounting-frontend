@@ -1,7 +1,212 @@
 @use "../../global" as g;
 @use "../../mixin/mixin" as m;
+@use "../../component/marquee" as c; // marqueeのkeyframesを使用可能にする
 
 /*!
  top > top-about
 ------------------------------
  */
+.top-about {
+}
+
+.top-about__inner {
+  padding: 52rem 30rem;
+
+  @include g.mq() {
+    padding: 110rem 120rem 0;
+  }
+}
+
+.top-about__title-wrap {
+  color: var(--color-accent-primary);
+}
+
+.top-about__title--en {
+  text-transform: none;
+
+  // componentのスタイルを削除
+  &::before,
+  &::after {
+    content: none;
+  }
+
+  @include g.mq() {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  span {
+    @include m.font-size($font-size: 50, $line-height: 47.5);
+    @include m.letter-spacing(-5);
+    display: inline-block;
+    position: relative;
+
+    @include g.mq() {
+      @include m.font-size($font-size: 110, $line-height: 105);
+    }
+
+    // 上下線の設定
+    &::before,
+    &::after {
+      content: "";
+      opacity: 0.25;
+      display: block;
+      height: 1px;
+      background-color: var(--color-bg-primary);
+      position: absolute;
+    }
+
+    // 上の線
+    &::before {
+      width: 145rem;
+      top: 6rem;
+      left: -18.6rem;
+
+      @include g.mq() {
+        width: 330rem;
+        top: 16rem;
+        left: -60rem;
+      }
+    }
+
+    // 下の線
+    &::after {
+      width: 216rem;
+      bottom: 4rem;
+      right: -18.6rem;
+
+      @include g.mq() {
+        width: 466rem;
+        bottom: 12rem;
+        right: 60rem;
+      }
+    }
+
+    // 2行のtitleの線設定
+    &:nth-of-type(2) {
+      // 上の線
+      &::before {
+        @include g.mq() {
+          width: 556rem;
+        }
+      }
+
+      // 下の線
+      &::after {
+        @include g.mq() {
+          width: 460rem;
+          right: -60rem;
+        }
+      }
+    }
+  }
+}
+
+.top-about__body {
+  margin-top: 36rem;
+
+  @include g.mq() {
+    margin-top: 80rem;
+    display: grid;
+    grid-template-columns: 1fr 600rem;
+    gap: 50rem;
+  }
+}
+
+.top-about__content {
+}
+
+.top-about__lead {
+  @include m.font-size($font-size: 26, $line-height: 42);
+  @include m.letter-spacing(0);
+  @include m.font-family-base($weight: "Medium");
+  transform: translateX(-16rem);
+
+  @include g.mq() {
+    @include m.font-size($font-size: 32, $line-height: 42);
+  }
+}
+
+.top-about__text-wrap {
+  margin-top: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40rem;
+
+  @include g.mq() {
+    margin-top: 46rem;
+    gap: 32rem;
+  }
+}
+
+.top-about__text {
+  @include m.font-size($font-size: 16, $line-height: 32);
+  @include m.letter-spacing(10);
+
+  @include g.mq() {
+    span {
+      display: block;
+    }
+  }
+}
+
+.top-about__btn {
+  margin-top: 40rem;
+
+  @include g.mq() {
+    margin-top: 80rem;
+    width: 300rem;
+  }
+}
+
+.top-about__img {
+  @include g.mq() {
+    position: relative;
+
+    // 装飾の設定
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: var(--z-index-negative);
+      @include m.background-img;
+    }
+
+    // 右上の装飾
+    &::before {
+      width: 120rem;
+      height: 150rem;
+      top: -60rem;
+      right: -60rem;
+      background-image: url(../img/top/top-about-decoration-right.svg);
+    }
+
+    // 左下の装飾
+    &::after {
+      width: 90rem;
+      aspect-ratio: 1/1;
+      bottom: -30rem;
+      left: -30rem;
+      background-image: url(../img/top/top-about-decoration-left.svg);
+    }
+  }
+}
+
+// 左向きにtextを流す
+.top-about__marquee {
+  margin-top: 52rem;
+
+  @include g.mq() {
+    margin-top: 180rem;
+  }
+
+  &::before,
+  &::after {
+    height: 0.8rem;
+  }
+}
+
+.top-about__marquee__inner {
+  animation-name: marquee-left;
+}
