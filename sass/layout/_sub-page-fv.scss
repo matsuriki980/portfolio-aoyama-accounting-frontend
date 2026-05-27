@@ -87,6 +87,7 @@
 
   span {
     display: block;
+    @include m.letter-spacing($letter-spacing: -2);
 
     @include g.mq() {
       display: inline-block;
