@@ -5,3 +5,12 @@
  contact
 ------------------------------
  */
+ // 背景画像を設定
+.contact-fv__inner {
+  background-color: var(--color-bg-primary);
+
+  // 黒フィルターを非表示
+  &::before {
+    display: none;
+  }
+}

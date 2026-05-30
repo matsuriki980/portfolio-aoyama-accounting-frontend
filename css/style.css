@@ -4077,6 +4077,13 @@ body.is-drawer-open {
  contact
 ------------------------------
  */
+.contact-fv__inner {
+  background-color: var(--color-bg-primary);
+}
+.contact-fv__inner::before {
+  display: none;
+}
+
 /*!
  contact > confirm
 ------------------------------
