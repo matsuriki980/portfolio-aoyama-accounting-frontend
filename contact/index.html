@@ -230,9 +230,9 @@
     <header class="contact-fv l-sub-fv" aria-label="ファーストビュー">
         <div class="contact-fv__inner l-sub-fv__inner">
             <div class="l-sub-fv__title-wrap">
-                <h1 class="l-sub-fv__title l-sub-fv__title--ja">
+                <div class="l-sub-fv__title l-sub-fv__title--ja">
                     お問い合わせ
-                </h1>
+                </div>
                 <p class="l-sub-fv__title l-sub-fv__title--en">
                     contact us
                 </p>
@@ -242,118 +242,201 @@
 
     <!-- main content -->
     <main>
-        <section class="contact">
+        <section class="contact js-header-trigger">
 
             <div class="contact__inner">
 
-                <!-- lead -->
-                <p class="contact__lead">
-                    メールでのお問い合わせは下記フォームからご要望事項を記入の上、送信をお願いいたします。
-                    <span>
-                        ※ご記入いただいたメールアドレスにてご連絡いたしますので、メールアドレスは正確にご入力ください。
-                    </span>
-                </p>
+                <div class="c-contact__head">
+
+                    <!-- title -->
+                    <h1 class="c-contact__title contact__title">
+                        お問い合わせフォーム
+                    </h1>
+
+                    <!-- lead -->
+                    <p class="c-contact__lead contact__lead">
+                        <span>メールでのお問い合わせは下記フォームからご要望事項を記入の上、送信をお願いいたします。</span>
+                        <span>
+                            ※ご記入いただいたメールアドレスにてご連絡いたしますので、メールアドレスは正確にご入力ください。
+                        </span>
+                    </p>
+
+                </div>
 
                 <!-- form -->
-                <form class="contact__form" action="">
+                <form id="contact-form" class="contact__form">
+
                     <div class="contact__form-wrap">
 
                         <!-- お名前 -->
                         <div class="contact__form-item">
-                            <label class="contact__form-label c-form__label" for="name">
-                                <span class="c-form__label-text">お名前</span>
-                                <span class="c-form__label-required">必須</span>
+
+                            <label for="name" class="contact__form-label c-form__label">
+                                <span class="c-form__label-text">
+                                    お名前
+                                </span>
+
+                                <span class="c-form__label-required">
+                                    必須
+                                </span>
                             </label>
 
-                            <input class="c-form__text contact__form-text" name="name" id="name" type="text"
-                                placeholder="山田 太郎" required>
+
+                            <input id="name" class="c-form__text contact__form-text" type="text" name="name"
+                                placeholder="山田 太郎" autocomplete="name" required>
+
                         </div>
 
                         <!-- 会社名 -->
                         <div class="contact__form-item">
-                            <label class="contact__form-label c-form__label" for="company-name">
-                                <span class="c-form__label-text">会社名</span>
+
+                            <label for="company-name" class="contact__form-label c-form__label">
+                                <span class="c-form__label-text">
+                                    会社名
+                                </span>
                             </label>
 
-                            <input class="c-form__text contact__form-text" name="company-name" id="company-name"
-                                type="text" placeholder="青山会計事務所">
+
+                            <input id="company-name" class="c-form__text contact__form-text" type="text"
+                                name="company_name" placeholder="青山会計事務所" autocomplete="organization">
+
                         </div>
 
                         <!-- 郵便番号 -->
                         <div class="contact__form-item">
-                            <label for="postal-code-1" class="contact__form-label c-form__label">
-                                <span class="c-form__label-text">郵便番号</span>
-                            </label>
-                            <div class="c-form__postal">
-                                <input type="text" class="c-form__text" id="postal-code-1" name="postal_code_1"
-                                    inputmode="numeric" pattern="\d{3}" maxlength="3" placeholder="000"
-                                    title="3桁の数字を入力してください">
 
-                                <span class="c-form__postal-hyphen">-</span>
-                                <input type="text" class="c-form__text" id="postal-code-2" name="postal_code_2"
-                                    inputmode="numeric" pattern="\d{4}" maxlength="4" placeholder="0000"
-                                    title="4桁の数字を入力してください">
+                            <label class="contact__form-label c-form__label">
+
+                                <span class="c-form__label-text">
+                                    郵便番号
+                                </span>
+
+                            </label>
+
+
+                            <div class="contact__postal">
+
+                                <input id="postal-first" class="c-form__text contact__form-text" type="text"
+                                    name="postal_first" maxlength="3" pattern="[0-9]{3}" inputmode="numeric"
+                                    placeholder="000" aria-label="郵便番号 前半3桁">
+
+
+                                <span class="contact__postal-hyphen">
+                                    -
+                                </span>
+
+
+                                <input id="postal-last" class="c-form__text contact__form-text" type="text"
+                                    name="postal_last" maxlength="4" pattern="[0-9]{4}" inputmode="numeric"
+                                    placeholder="0000" aria-label="郵便番号 後半4桁">
+
                             </div>
+
                         </div>
 
                         <!-- 住所 -->
                         <div class="contact__form-item">
-                            <label class="contact__form-label c-form__label" for="address">
-                                <span class="c-form__label-text">住所</span>
+
+                            <label for="address" class="contact__form-label c-form__label">
+                                <span class="c-form__label-text">
+                                    住所
+                                </span>
                             </label>
 
-                            <input class="c-form__text contact__form-text" name="address" id="address" type="text"
-                                placeholder="静岡市駿河区森下町">
+
+                            <input id="address" class="c-form__text contact__form-text" type="text" name="address"
+                                placeholder="静岡市駿河区森下町" autocomplete="street-address">
+
                         </div>
 
                         <!-- 電話番号 -->
                         <div class="contact__form-item">
-                            <label class="contact__form-label c-form__label" for="tel">
-                                <span class="c-form__label-text">電話番号</span>
-                                <span class="c-form__label-required">必須</span>
+
+                            <label for="tel" class="contact__form-label c-form__label">
+                                <span class="c-form__label-text">
+                                    電話番号
+                                </span>
+
+                                <span class="c-form__label-required">
+                                    必須
+                                </span>
                             </label>
 
-                            <input class="c-form__text contact__form-text" name="tel" id="tel" type="text"
-                                placeholder="000-0000-0000" required>
+
+                            <input id="tel" class="c-form__text contact__form-text" type="text" name="tel"
+                                placeholder="000-0000-0000" inputmode="tel" autocomplete="tel" required>
+
                         </div>
 
                         <!-- メールアドレス -->
                         <div class="contact__form-item">
+
                             <label for="email" class="contact__form-label c-form__label">
-                                <span class="c-form__label-text">メールアドレス</span>
-                                <span class="c-form__required">必須</span>
+                                <span class="c-form__label-text">
+                                    メールアドレス
+                                </span>
+
+                                <span class="c-form__label-required">
+                                    必須
+                                </span>
                             </label>
-                            <input type="email" class="c-form__text" name="email" id="email"
-                                placeholder="info@aoyama-tax-office.jp" required>
+
+
+                            <input id="email" class="c-form__text contact__form-text" type="email" name="email"
+                                placeholder="info@aoyama-tax-office.jp" autocomplete="email" required>
+
                         </div>
 
                         <!-- お問い合わせ内容 -->
                         <div class="contact__form-item">
+
                             <label for="message" class="contact__form-label c-form__label">
-                                <span class="c-form__label-text">お問い合わせ内容</span>
-                                <span class="c-form__required">必須</span>
+                                <span class="c-form__label-text">
+                                    お問い合わせ内容
+                                </span>
+
+                                <span class="c-form__label-required">
+                                    必須
+                                </span>
                             </label>
-                            <textarea class="contact__form-textarea c-form__text" name="message" id="message"
-                                placeholder="お問い合わせ内容を入力してください。" required=""></textarea>
+
+
+                            <textarea id="message" class="contact__form-textarea c-form__text" name="message"
+                                placeholder="お問い合わせ内容を入力してください。" required></textarea>
+
                         </div>
 
-                        <!-- check box -->
+                        <!-- privacy -->
                         <div class="privacy-consent">
-                            <input type="checkbox" class="checkbox_icon" id="privacy_agree" name="privacy_agree"
-                                required="">
 
-                            <!-- 新規ウインドウを開く -->
-                            <a href="/privacy-policy" target="_blank">プライバシーポリシー</a>
-                            <label for="privacy_agree">に同意し、<span>お問い合わせする</span>
+
+                            <input id="privacy-agree" class="privacy-consent__checkbox" type="checkbox"
+                                name="privacy_agree" required>
+
+
+                            <label for="privacy-agree" class="privacy-consent__label">
+
+                                <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">
+                                    プライバシーポリシー
+                                </a>
+                                に同意し、お問い合わせする
                             </label>
+
+
                         </div>
 
-                        <!-- btn -->
-                        <button class="contact__form-btn">入力内容を確認する</button>
+                        <!-- button -->
+                        <button type="submit" class="contact__form-btn">
+                            入力内容を確認する
+                        </button>
+
+
                     </div>
+
                 </form>
 
             </div>
+
         </section>
     </main>
 
