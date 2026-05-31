@@ -1,0 +1,28 @@
+@use "../../global" as g;
+@use "../../mixin/mixin" as m;
+
+/*!
+ component > contact > contact-head
+ ------------------------------
+*/
+.c-contact__head {
+  text-align: center;
+}
+
+.c-contact__title {
+  @include m.font-family-base($weight: "Medium");
+  @include m.font-size($font-size: 26, $line-height: 42);
+
+  @include g.mq() {
+    @include m.font-size($font-size: 32, $line-height: 48);
+  }
+}
+
+.c-contact__lead {
+  margin-top: 24rem;
+
+  span {
+    display: block;
+    letter-spacing: 0.02em;
+  }
+}
