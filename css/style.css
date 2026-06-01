@@ -4364,6 +4364,16 @@ body.is-drawer-open {
  contact > thanks
 ------------------------------
  */
+.thanks__btn {
+  display: block;
+  margin-top: 40rem;
+}
+@media screen and (min-width: 900px) {
+  .thanks__btn {
+    margin-top: 56rem;
+  }
+}
+
 /*!
  privacy-policy
 ------------------------------
