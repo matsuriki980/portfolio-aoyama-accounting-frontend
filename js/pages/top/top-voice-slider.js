@@ -4,6 +4,8 @@
 export const initTopVoiceSlider = () => {
   const topVoiceSlider = document.querySelector(".top-voice__list");
 
+  if (!topVoiceSlider) return;
+
   const mySwiper = new Swiper(topVoiceSlider, {
     // Optional parameters
     slidesPerView: 1.15,
