@@ -6,6 +6,8 @@ export const initTopServiceSlider = () => {
 
   const topServiceSlider = document.querySelector(".top-service__content");
 
+  if(!topServiceSlider) return;
+
   const initSwiper = () => {
     const isSP = window.matchMedia("(max-width: 899px)").matches;
 
