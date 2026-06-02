@@ -6,20 +6,17 @@
  ------------------------------
 */
 
-.c-form__label {
+.c-form__item-head {
   @include m.font-family-base($weight: "Medium");
   display: flex;
   align-items: center;
   gap: 5rem;
-}
-
-.c-form__label-text {
   font-size: 18rem;
   line-height: 2;
   @include m.letter-spacing(8);
 }
 
-.c-form__label-required {
+.c-form__required {
   font-size: 12rem;
   line-height: 2;
   @include m.letter-spacing(8);
