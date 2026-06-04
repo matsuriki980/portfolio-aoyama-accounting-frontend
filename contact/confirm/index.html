@@ -244,7 +244,7 @@
     <!-- main content -->
     <main>
 
-        <section class="confirm js-header-trigger">
+        <section class="confirm js-header-trigger js-confirm">
             <div class="confirm__inner c-contact__inner">
 
                 <!-- head -->
@@ -269,99 +269,82 @@
 
                     <div class="confirm__item">
                         <dt>
-                            <span class="c-form__label-text">
-                                お名前
-                            </span>
-
-                            <span class="c-form__label-required">
-                                必須
+                            <span class="c-form__item-head">
+                                お名前<span class="c-form__required">必須</span>
                             </span>
                         </dt>
-
-                        <dd class="c-form__text">山田 太郎</dd>
+                        <dd class="c-form__text" data-confirm="user-name"></dd>
                     </div>
 
                     <div class="confirm__item">
                         <dt>
-                            <span class="c-form__label-text">
+                            <span class="c-form__item-head">
                                 会社名
                             </span>
                         </dt>
 
-                        <dd class="c-form__text">青山会計事務所</dd>
+                        <dd class="c-form__text" data-confirm="company-name"></dd>
                     </div>
 
                     <div class="confirm__item">
                         <dt>
-                            <span class="c-form__label-text">
+                            <span class="c-form__item-head">
                                 郵便番号
                             </span>
                         </dt>
 
-                        <dd class="c-form__text">000 - 0000</dd>
+                        <dd class="c-form__text"data-confirm="postal"></dd>
                     </div>
 
                     <div class="confirm__item">
                         <dt>
-                            <span class="c-form__label-text">
+                            <span class="c-form__item-head">
                                 住所
                             </span>
                         </dt>
 
-                        <dd class="c-form__text">静岡市駿河区森下町</dd>
+                        <dd class="c-form__text" data-confirm="address"></dd>
                     </div>
 
                     <div class="confirm__item">
                         <dt>
-                            <span class="c-form__label-text">
-                                電話番号
-                            </span>
-
-                            <span class="c-form__label-required">
-                                必須
+                            <span class="c-form__item-head">
+                                電話番号<span class="c-form__required">必須</span>
                             </span>
                         </dt>
 
-                        <dd class="c-form__text">000-0000-0000</dd>
+                        <dd class="c-form__text" data-confirm="tel"></dd>
                     </div>
 
                     <div class="confirm__item">
                         <dt>
-                            <span class="c-form__label-text">
-                                メールアドレス
-                            </span>
-
-                            <span class="c-form__label-required">
-                                必須
+                            <span class="c-form__item-head">
+                                メールアドレス<span class="c-form__required">必須</span>
                             </span>
                         </dt>
 
-                        <dd class="c-form__text">info@aoyama-tax-oficce.jp</dd>
+                        <dd class="c-form__text" data-confirm="email"></dd>
                     </div>
 
                     <div class="confirm__item">
                         <dt>
-                            <span class="c-form__label-text">
-                                お問い合わせ内容
-                            </span>
-
-                            <span class="c-form__label-required">
-                                必須
+                            <span class="c-form__item-head">
+                                お問い合わせ内容<span class="c-form__required">必須</span>
                             </span>
                         </dt>
 
-                        <dd class="c-form__text">お問い合わせ内容を入力してください。</dd>
+                        <dd class="c-form__text" data-confirm="message"></dd>
                     </div>
                 </dl>
 
                 <!-- button -->
                 <div class="confirm__btn-wrap">
 
-                    <button type="submit" class="c-contact__btn">
+                    <button type="submit" class="c-contact__btn confirm__submit-btn">
                         入力内容を送信する
                     </button>
 
-                    <button type="submit" class="c-contact__btn c-contact__btn--prev">
+                    <button type="button" class="c-contact__btn c-contact__btn--prev">
                         入力画面に戻る
                     </button>
                 </div>
