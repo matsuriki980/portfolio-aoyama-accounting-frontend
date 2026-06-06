@@ -71,6 +71,9 @@ frontend
 │
 ├── privacy-policy
 │   └── index.html
+|
+├── page-404
+│   └── index.html
 │
 └── index.html
 ```
