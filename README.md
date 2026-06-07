@@ -5,8 +5,8 @@
 
 ## URL
 
-- サイトURL：[https://matsuyamarikiya.jp/aoyama-accounting/](https://matsuyamarikiya.jp/aoyama-accounting/)
-- Git hub URL：[https://github.com/matsuriki980/portfolio-aoyama-accounting](https://github.com/matsuriki980/portfolio-aoyama-accounting)
+- サイトURL：[https://matsuyamarikiya.jp/aoyama-accounting/frontend/](https://matsuyamarikiya.jp/aoyama-accounting/frontend/)
+- Git hub URL：[https://github.com/matsuriki980/portfolio-aoyama-accounting](https://github.com/matsuriki980/portfolio-aoyama-accountingfrontend/)
 
 ## 使用技術
 
